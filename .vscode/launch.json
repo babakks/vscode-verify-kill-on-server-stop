@@ -1,0 +1,44 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "client",
+			"request": "launch",
+			"type": "node",
+			"outputCapture": "std",
+			"runtimeArgs": [
+				"client.js"
+			]
+		},
+		{
+			"name": "server (then, invoke client)",
+			"request": "launch",
+			"type": "node",
+			"args": [
+				"server.js"
+			],
+			"outputCapture": "std",
+			"serverReadyAction": {
+				"action": "startDebugging",
+				"killOnServerStop": true,
+				"name": "client",
+				"pattern": "server started"
+			}
+		},
+		{
+			"name": "server (then, open browser)",
+			"request": "launch",
+			"type": "node",
+			"args": [
+				"server.js"
+			],
+			"outputCapture": "std",
+			"serverReadyAction": {
+				"action": "debugWithChrome",
+				"uriFormat": "github.com/#%s",
+				"killOnServerStop": true,
+				"pattern": "server started"
+			}
+		},
+	]
+}
