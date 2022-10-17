@@ -1,6 +1,6 @@
 # How to verify
 
-This repo is created to verify [this PR](microsoft/vscode#163124).
+This repo is created to verify [this PR](https://github.com/microsoft/vscode/pull/163779).
 
 ## Verify: when `killOnServerStop` is enabled
 
